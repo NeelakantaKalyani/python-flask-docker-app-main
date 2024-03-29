@@ -8,9 +8,10 @@ COPY . /usr/app
 
 WORKDIR /usr/app
 
+ENTRYPOINT ["python", "app.py"]
+
 # Install the requirements
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "app.py"]
 
 EXPOSE 5000
